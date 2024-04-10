@@ -7,7 +7,7 @@ class TestMMProtocol(unittest.TestCase):
 
     def test_addition(self):
     
-        header = bytearray([10,0,44,0,0,0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 6, 0])
+        header = bytearray([10, 0, 44, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 6, 0])
         parsed = parse_client_header(header)
 
         self.assertEqual(parsed.length, 10)
